@@ -1,3 +1,4 @@
+package mc322.lab01;
 
 public class Seguradora {
 	private String nome;
