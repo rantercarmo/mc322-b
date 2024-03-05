@@ -1,4 +1,4 @@
-# **MC322 - Turma A**
+# **MC322 - Turma B**
 
 # **Aluno**
     Ranter Soares
