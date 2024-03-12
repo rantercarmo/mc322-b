@@ -61,6 +61,7 @@ public class Jogador {
 
     //validar CPF
 	private boolean validarCPF (String cpf) {
+        cpf = cpf.replaceAll("[^0-9]", "");
 		// verifica se há números iguais apenas no CPF
         if (cpf.equals("00000000000") ||
             cpf.equals("11111111111") ||
