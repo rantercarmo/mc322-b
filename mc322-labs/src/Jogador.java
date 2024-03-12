@@ -13,7 +13,7 @@ public class Jogador {
     public Jogador(String nome, String cpf, String email, String foto){
         this.nome  = nome;
         this.cpf = validadorDeCPF(cpf);
-        this.email = email;
+        this.email = validadorDeEmail(email);
         this. foto = foto;
     }
 
@@ -118,17 +118,32 @@ public class Jogador {
     public String validadorDeCPF(String cpf){
         while(validarCPF(cpf) != true){
             if(validarCPF(cpf)){
-             this.cpf = cpf;
+                return cpf;
          }
             else{
-              System.out.println("O cpf informado não é válido");
-             Scanner ler = new Scanner(System.in);
-             System.out.printf("Informe um CPF válido:\n");
-             cpf = ler.next();
+                System.out.println("O cpf informado não é válido");
+                Scanner ler = new Scanner(System.in);
+                System.out.printf("Informe um CPF válido:\n");
+                cpf = ler.next();
          }
     }
     return cpf;
 
+    }
+
+    public String validadorDeEmail(String email){
+        while(validarEmail(email) != true){
+            if(validarEmail(email)){
+                return email;    
+            }
+            else{
+            System.out.println("O e-mail informado não é válido");
+             Scanner ler = new Scanner(System.in);
+             System.out.printf("Informe um e-mail válido:\n");
+             email = ler.next();
+            }
+        }
+        return email;
     }
 
     //validar e-mail
