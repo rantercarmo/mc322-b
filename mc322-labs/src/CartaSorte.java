@@ -22,6 +22,7 @@ public class CartaSorte {
         this.restricao = restricao;
     }
 
+
     //getters e setters
     public int getId(){
         return this.id;

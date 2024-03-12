@@ -1,6 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Scanner;
 
 public class Jogador {
 
@@ -11,7 +12,19 @@ public class Jogador {
 
     public Jogador(String nome, String cpf, String email, String foto){
         this.nome  = nome;
-        this.cpf = cpf;
+
+
+        //pensar melhor nesse tratamento
+        if(validarCPF(cpf)){
+            this.cpf = cpf;
+        }
+        else{
+            System.out.println("O cpf informado não é válido");
+            Scanner ler = new Scanner(System.in);
+            System.out.printf("Informe um CPF válido:\n");
+            cpf = ler.next();
+        }
+        
         this.email = email;
         this. foto = foto;
     }
